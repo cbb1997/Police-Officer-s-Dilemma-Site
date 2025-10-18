@@ -4619,11 +4619,10 @@ var ASM_CONSTS = {
       }
 
   function _ToQualtrics(score) {
-  
-      if (typeof receiveUnityData === 'function') {
-        receiveUnityData(score);
+      if (window.top.receiveUnityData) {
+        window.top.receiveUnityData(score);
       } else {
-        console.warn("Qualtrics function receiveUnityData not found");
+        console.warn("receiveUnityData not found on top window");
       }
     }
 
