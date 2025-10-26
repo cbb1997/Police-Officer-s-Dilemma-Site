@@ -4619,11 +4619,11 @@ var ASM_CONSTS = {
       }
 
   function _ToQualtrics(score) {
-      if (window.top.receiveUnityData) {
-        window.top.receiveUnityData(score);
-      } else {
-        console.warn("receiveUnityData not found on top window");
-      }
+  
+      window.parent.postMessage({
+        type: "unityData",
+        score: score
+      }, "https:///illinois.qualtrics.com");
     }
 
   function ___assert_fail(condition, filename, line, func) {
