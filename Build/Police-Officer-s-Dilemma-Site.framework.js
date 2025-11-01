@@ -4618,11 +4618,12 @@ var ASM_CONSTS = {
           _JS_FileSystem_Sync();
       }
 
-  function _ToQualtrics(score) {
+  function _ToQualtrics(score, jsonData) {
   
       window.parent.postMessage({
         type: "unityData",
-        score: score
+        score: score,
+        jsonData: jsonData
       }, "https:///illinois.qualtrics.com");
     }
 
