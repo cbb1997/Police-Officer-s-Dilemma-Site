@@ -2085,13 +2085,13 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  4186912: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
- 4186973: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
- 4187037: function() {return Module.webglContextAttributes.powerPreference;},  
- 4187095: function() {Module['emscripten_get_now_backup'] = performance.now;},  
- 4187150: function($0) {performance.now = function() { return $0; };},  
- 4187198: function($0) {performance.now = function() { return $0; };},  
- 4187246: function() {performance.now = Module['emscripten_get_now_backup'];}
+  4186896: function() {return Module.webglContextAttributes.premultipliedAlpha;},  
+ 4186957: function() {return Module.webglContextAttributes.preserveDrawingBuffer;},  
+ 4187021: function() {return Module.webglContextAttributes.powerPreference;},  
+ 4187079: function() {Module['emscripten_get_now_backup'] = performance.now;},  
+ 4187134: function($0) {performance.now = function() { return $0; };},  
+ 4187182: function($0) {performance.now = function() { return $0; };},  
+ 4187230: function() {performance.now = Module['emscripten_get_now_backup'];}
 };
 
 
@@ -4618,13 +4618,11 @@ var ASM_CONSTS = {
           _JS_FileSystem_Sync();
       }
 
-  function _ToQualtrics(score, jsonData) {
-  
+  function _ToQualtrics(data) {
       window.parent.postMessage({
         type: "unityData",
-        score: score,
-        jsonData: jsonData
-      }, "https:///illinois.qualtrics.com");
+        json: data,
+      }, "https://illinois.qualtrics.com");
     }
 
   function ___assert_fail(condition, filename, line, func) {
