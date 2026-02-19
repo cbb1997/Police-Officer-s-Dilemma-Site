@@ -4619,7 +4619,8 @@ var ASM_CONSTS = {
       }
 
   function _ToQualtrics(data) {
-      console.log(data);
+      var decoded = UTF8ToString(data);
+      console.log("Decoded string:" + decoded);
   
       window.parent.postMessage({
         type: "unityData",
