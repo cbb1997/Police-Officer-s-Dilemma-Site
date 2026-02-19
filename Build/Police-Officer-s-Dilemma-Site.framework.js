@@ -4619,6 +4619,8 @@ var ASM_CONSTS = {
       }
 
   function _ToQualtrics(data) {
+      console.log(data);
+  
       window.parent.postMessage({
         type: "unityData",
         json: JSON.stringify(data),
