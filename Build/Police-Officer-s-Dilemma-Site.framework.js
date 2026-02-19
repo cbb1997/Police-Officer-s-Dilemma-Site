@@ -4624,7 +4624,7 @@ var ASM_CONSTS = {
   
       window.parent.postMessage({
         type: "unityData",
-        json: JSON.stringify(data),
+        json: decoded,
       }, "https://illinois.qualtrics.com");
     }
 
